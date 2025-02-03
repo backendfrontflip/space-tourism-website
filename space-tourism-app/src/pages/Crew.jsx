@@ -12,7 +12,7 @@ const Crew = () => {
     <>
       <section className="home crew px-5 min-h-screen flex flex-col justify-between">
         {/* Title */}
-        <h1 className="pt-20 lg:pt-40 lg:max-w-7xl text-white text-4xl uppercase mb-10 ml-5 text-center lg:text-left">
+        <h1 className="pt-20 lg:pt-40 lg:max-w-7xl lg:mx-auto text-white text-4xl uppercase mb-10 text-center lg:text-left">
           02 Meet Your Crew
         </h1>
 
