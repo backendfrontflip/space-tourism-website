@@ -1,5 +1,5 @@
 import {
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
   RouterProvider,
   Route,
@@ -21,7 +21,7 @@ const RootLayout = () => (
 );
 
 const App = () => {
-  const router = createBrowserRouter(
+  const router = createHashRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Homepage />} />
