@@ -1,14 +1,38 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+  Route,
+  Outlet,
+} from 'react-router-dom';
+import Header from './components/Header';
+import Homepage from './components/HomePage';
+import Destination from './pages/Destination';
+import Crew from './pages/Crew';
+import Technology from './pages/Technology';
+import './App.css';
+import './index.css'; 
 
-import './App.css'
+const RootLayout = () => (
+  <>
+    <Header />
+    <Outlet />
+  </>
+);
 
-function App() {
-  return (
-    <>
-    <h1>Hello World</h1>
-    </>
-  )
-}
+const App = () => {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<RootLayout />}>
+        <Route index element={<Homepage />} />
+        <Route path="destination" element={<Destination />} />
+        <Route path="crew" element={<Crew />} />
+        <Route path="technology" element={<Technology />} />
+      </Route>
+    )
+  );
 
-export default App
+  return <RouterProvider router={router} />;
+};
+
+export default App;
