@@ -45,7 +45,7 @@ const Crew = () => {
           {/* Crew Image */}
           <article className="flex justify-center items-center w-full max-h-screen overflow-hidden">
             <img 
-              src={`/assets/crew/${images.png.split("/").pop()}`} 
+              src={images.png} 
               alt={name} 
               title={name} 
               className="w-full h-auto max-w-xs md:max-w-md lg:max-w-lg xl:max-w-xl object-cover mx-auto"
