@@ -16,7 +16,7 @@ const Header = () => {
       <header className="header flex items-center justify-between w-full lg:flex-row p-5">
         <div>
           <Link to="/">
-            <img src={logo} alt="Space Tourism" title="Space Tourism" />
+            <img src={logo} alt="" title="" />
           </Link>
         </div>
 
